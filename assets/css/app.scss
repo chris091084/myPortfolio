@@ -68,6 +68,7 @@ h1{
 .welcome {
     width: 50%;
     margin:auto;
+    border-bottom:1mm ridge rgb(52, 152, 219);
 }
 .textWelcome{
     font-family: 'Righteous', cursive;
@@ -92,7 +93,23 @@ button>a{
 .buttonWelcome{
     display: flex;
     justify-content: space-around;
+    margin-bottom: 30px;
 }
+
+/////mes projets//////////////
+.mesProjets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.sectionProjectTitle{
+    font-family: 'Righteous', cursive;
+    font-size:3em;
+}
+
+
+
 
 
 
