@@ -3,19 +3,19 @@
 {% block title %}Hello IndexController!{% endblock %}
 
 {% block body %}
-    <div class="block-nav">
+    <div class="block-nav" >
         <h1> Christian COLEY</h1>
         <h2 class="status"> Dévellopeur Web & Mobile </h2>
-        <img class="photoChristian" src="/pictures/chris.jpg" alt="photo de christian">
+        <img class="photoChristian" id="bio" src="/pictures/chris.jpg" alt="photo de christian">
     </div>
     <section class="welcome">
-        <div class ='bio' id="bio">
+        <div class ='bio'>
             <h2 class="textWelcome">Bienvenue dans mon site!!!</h2>
             <p class="textBio"> Actuellement à la WILD CODE SCHOOL de Lyon, je me forme afin d’acquérir un savoir-faire pour intégrer une équipe passionnée qui me permettra de développer mes compétences.
 
                 Après une dizaine d’années en agroalimentaire, j’ai décidé de me donner une nouvelle orientation.  </p>
         </div>
-    <div class = "buttonWelcome">
+    <div class = "buttonWelcome" >
         <button class="btn btn-warning" ><a href="/items/CV-Christian-COLEY.pdf" download="CV-Christian-COLEY.pdf"> Télécharger le CV</a></button>
         <button class="contact btn btn-primary"><a href="#footer">Mes coordonées</a></button>
     </div>
@@ -31,7 +31,7 @@
             {% for projects in project %}
             <div class="card-deck col-lg-4">
                 <div class="card">
-                    <img class="card-img-top" src="{{ projects.screenShoot }}" alt="Card image cap">
+                    <a href="{{projects.linkUrl}}"><img class="card-img-top" src="{{ projects.screenShoot }}" alt="Card image cap"></a>
                     <div class="card-body">
                         <h5 class="card-title">{{ projects.name }}</h5>
                         <p class="card-text">{{ projects.comment }}</p>
@@ -45,7 +45,7 @@
                             </div>
                         </div>
 
-                        <a href="" <p class="card-text"><small class="text-muted">{{projects.linkUrl}}</small></p>
+                        <a href="{{projects.linkUrl}}"><p class="card-text"><small class="text-muted">{{projects.linkUrl}}</small></p></a>
                     </div>
                 </div>
             </div>

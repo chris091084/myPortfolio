@@ -3,5 +3,37 @@
 {% block title %}Hello CVController!{% endblock %}
 
 {% block body %}
+    <section class="blockCv">
+
+    <div class="container ">
+        <h2> Expériences</h2>
+        <div class="flex-column">
+            {% for experiences in experience %}
+
+                <h2>{{ experiences.ayear }} - {{experiences.title}}</h2>
+                <ul>
+                    {% for detail in experiences.detailsExp %}
+                    <li>- {{ detail.description }}</li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+        <h2> Formations</h2>
+        <div class="container ">
+            <div class="flex-column">
+                {% for formations in formation %}
+
+                    <h2>{{ formations.year }} - {{formations.title}}</h2>
+                    <ul>
+                        {% for detail in formations.detailsFormation %}
+                            <li>- {{ detail.description }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endfor %}
+            </div>
+
+    </div>
+    </section>
+
 
 {% endblock %}
