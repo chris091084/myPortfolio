@@ -29,10 +29,9 @@
                             Mes Projets
                         </a>
                         <div class="linkNav dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">wild Circus</a>
-                            <a class="dropdown-item" href="#">Déchets dans l'espace</a>
-                            <a class="dropdown-item" href="#">Trek-Me</a>
-                            <a class="dropdown-item" href="#">Balises (vrais client)</a>
+                            {% for projects in project %}
+                            <a class="dropdown-item" href="#">{{ projects.name }}</a>
+                            {% endfor %}
                         </div>
                     </li>
                 </ul>

@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class IndexController extends AbstractController
 {
     /**
-     * @Route("/index", name="index")
+     * @Route("/", name="index")
      */
     public function index(ProjectRepository $project)
     {
@@ -20,4 +20,6 @@ class IndexController extends AbstractController
             'project' => $project->findAll(),
         ]);
     }
+
+
 }
