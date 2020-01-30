@@ -29,9 +29,7 @@
                 <div class="row">
 
             {% for projects in project %}
-
-
-            <div class="card-deck col-4">
+            <div class="card-deck col-lg-4">
                 <div class="card">
                     <img class="card-img-top" src="{{ projects.screenShoot }}" alt="Card image cap">
                     <div class="card-body">
@@ -40,7 +38,9 @@
                         <div class="container-fluid">
                             <div class="row">
                         {% for  technologie in projects.technologies %}
-                       <img class="col-3 logo" src="{{ technologie.logo }}" alt="logo {{ technologie.name }}">
+                            <div class="col-4">
+                       <img class=" img-fluid logo" src="{{ technologie.logo }}" alt="logo {{ technologie.name }}">
+                            </div>
                         {% endfor %}
                             </div>
                         </div>

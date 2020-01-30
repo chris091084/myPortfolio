@@ -21,5 +21,18 @@ class IndexController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/", name="base")
+     */
+    public function footNav(ProjectRepository $project)
+    {
+
+
+
+        return $this->render('base.html.twig', [
+            'project' => $project->findAll(),
+        ]);
+    }
+
 
 }
