@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Repository\ProjectRepository;
-use App\Repository\ProjectsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 

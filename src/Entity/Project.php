@@ -48,6 +48,10 @@ class Project
      */
     private $otherScreenshoots;
 
+    public function __toString() :string
+    {
+        return $this->name;
+    }
     public function __construct()
     {
         $this->technologies = new ArrayCollection();
