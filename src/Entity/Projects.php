@@ -26,7 +26,7 @@ class Projects
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $pitcture;
+    private $picture;
 
     /**
      * @ORM\Column(type="text", nullable=true)
@@ -72,14 +72,14 @@ class Projects
         return $this;
     }
 
-    public function getPitcture(): ?string
+    public function getPicture(): ?string
     {
-        return $this->pitcture;
+        return $this->picture;
     }
 
-    public function setPitcture(?string $pitcture): self
+    public function setPicture(?string $picture): self
     {
-        $this->pitcture = $pitcture;
+        $this->picture = $picture;
 
         return $this;
     }
