@@ -33,6 +33,11 @@ class Technologie
      */
     private $projects;
 
+    public function __toString() :string
+    {
+        return $this->name;
+    }
+
     public function __construct()
     {
         $this->projects = new ArrayCollection();

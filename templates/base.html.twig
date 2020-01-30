@@ -8,6 +8,8 @@
         {% endblock %}
         <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
     </head>
+
+    <body>
     {% block navbar %}
         <nav class="navbar navbar-expand-lg fixed-top ">
             <a class=" linkHome navbar-brand" href="#">Christian COLEY</a>
@@ -37,11 +39,47 @@
             </div>
         </nav>
     {% endblock %}
-    <body>
 
         {% block body %}{% endblock %}
+        {% block footer %}
+            <footer >
+                <div id="test" class="mt-5 pt-5 pb-5 footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-5 col-xs-12 about-company">
+                                <h2>Réseau social</h2>
+                                <a  href="https://www.linkedin.com/in/christian-coley-736b68173/"><img class="logoFooter" src="pictures/logos/linkedin.png" class="pr-5 text-white-50 facebookLogo" alt="logo et lien vers linkedin"></a>
+                                <a  href="https://www.github.com/chris091084/"><img class="logoFooter" src="pictures/logos/github.png" class="pr-5 text-white-50 facebookLogo" alt="logo et lien vers github"></a>
+                                <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i class="fa fa-linkedin-square"></i></a></p>
+                            </div>
+                            <div class="col-lg-3 col-xs-12 links">
+                                <h4 class="mt-lg-0 mt-sm-3">Liens</h4>
+                                <ul class="m-0 p-0">
+                                    <li><a href="#bio">Ma bio</a></li>
+                                    <li><a href="#">Mon CV</a></li>
+                                    <li><a href="#mesprojets">Mes projets</a></li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 col-xs-12 location">
+                                <h4 class="mt-lg-0 mt-sm-4">Téléphone:</h4>
+                                <p class="mb-0">06.50.27.92.53</p>
+                                <p>118 chemin du bassards</p>
+                                <p>38121 CHONAS L'AMBALLAN</p>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col copyright">
+                                <p class=""><small class="text-white-50">© 2020. Christian COLEY.</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        {% endblock %}
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
+
     </body>
 </html>
