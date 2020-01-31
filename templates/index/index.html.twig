@@ -17,12 +17,12 @@
         </div>
     <div class = "buttonWelcome" >
         <button class="btn btn-warning" ><a href="/items/CV-Christian-COLEY.pdf" download="CV-Christian-COLEY.pdf"> Télécharger le CV</a></button>
-        <button class="contact btn btn-primary"><a href="#footer">Mes coordonées</a></button>
+        <button class="contact btn btn-primary"><a href="#contact">Me Contacter</a></button>
     </div>
     </section>
 
     <section class="mesProjets" id="mesprojets">
-        <h2 class="sectionProjectTitle">Mes Projets Web</h2>
+        <h2 class="sectionTitle">Mes Projets Web</h2>
 
         <article>
             <div class="container-fluid">
@@ -39,8 +39,9 @@
                             <div class="row">
                         {% for  technologie in projects.technologies %}
                             <div class="col-4">
-                       <img class=" img-fluid logo" src="{{ technologie.logo }}" alt="logo {{ technologie.name }}">
+                       <img style="height: 5rem; width: 100px" class=" img-fluid logo" src="{{ technologie.logo }}" alt="logo {{ technologie.name }}">
                             </div>
+{#                            modifier les logos#}
                         {% endfor %}
                             </div>
                         </div>
@@ -55,10 +56,18 @@
         </article>
     </section>
 
-    <section class="contact">
-        <div class="row">
-            {{ form_start(form) }}
+    <section class='sectionContact' id="contact" >
+        <h2 class="sectionTitle"> Me contacter</h2>
+        <div class="container">
 
+
+            {{ form_start(form) }}
+            {{ form_row(form.firstname,{'label': 'Votre prénom'   }) }}
+            {{ form_row(form.lastname,{'label': 'Votre nom'   }) }}
+            {{ form_row(form.email,{'label': 'Votre e-mail'   }) }}
+            {{ form_row(form.subject,{'label': 'Sujet'   }) }}
+            {{ form_row(form.text,{'label': 'Votre text'   }) }}
+            <button class="btn btn-secondary " type="submit" name="submit"> Envoyer </button>
             {{ form_end(form) }}
 
         </div>

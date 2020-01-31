@@ -23,10 +23,10 @@ class IndexController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()){
             $email = (new TemplatedEmail())
-                ->from($this->getParameter('christian'))
-                ->to($this->getParameter('christian.coley@hotmail.fr'))
+                ->from('christian.coley@hotmail.fr')
+                ->to('sylvainchristian@gmail.com')
                 ->subject('Une nouvelle série vient d\'être publiée !')
-                ->htmlTemplate('program/email/notification.html.twig');
+                ->html('hello');
 
             $mailer->send($email);
             return $this->redirectToRoute('index');
