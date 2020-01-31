@@ -1,33 +1,45 @@
 body {
     background-color: lightgray;
 }
+p{
+    color:#555;
+    font-family: 'Roboto', sans-serif;
+}
+a:hover {
+    text-decoration: none;
+    color: yellow !important;
+    transition-duration: 1s;
+    text-decoration: none;
+}
+
+
 @import "~bootstrap/scss/bootstrap";
 
 li{
     list-style: none;
 }
 .navbar{
-    background-color: rgb(52, 152, 219) !important;
+
     font-family: 'Righteous', cursive;
-    box-shadow: 0px 2px 10px black;
+
 
 }
 
 .linkNav{
     color : white;
-    font-size: 1.5em;
+    font-size: 2em;
     margin-right: 50px;
 }
 
 .linkDropdown{
   color : white;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .linkHome{
   margin-right: 600px;
   color : white;
-  font-size: 1.9em;
+  font-size: 2.5em;
 }
 
 
@@ -51,7 +63,7 @@ li{
 
 }
 .itemNavbar{
-  margin-right: 600px;
+  margin-left: 10%;
 }
 h1{
     font-size: 6em;
@@ -72,7 +84,9 @@ h1{
     width: 50%;
     margin:auto;
     border-bottom:1mm ridge rgb(52, 152, 219);
+    color:#555;
 }
+
 .textWelcome{
     font-family: 'Righteous', cursive;
     font-size:3em;
@@ -110,6 +124,13 @@ button>a{
     margin-bottom: 100px;
 
 }
+h5{
+    font-size: 2em;
+    font-family: 'Righteous', cursive;
+}
+small{
+    font-size: 1.2em;
+}
 .sectionTitle{
     font-family: 'Righteous', cursive;
     font-size:3em;
@@ -124,6 +145,11 @@ footer{
 }
 .logoFooter{
     width: 70px;
+}
+
+
+.card-body{
+    background-color: whitesmoke;
 }
 
 ////fomulaire login/////////
@@ -142,7 +168,11 @@ footer{
 
 ////formulaire de contact//////
 
-
+label{
+    font-size: 1.2em;
+    color:#555;
+    font-family: 'Roboto', sans-serif;
+}
 
 
 

@@ -7,16 +7,18 @@
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
         <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="/fontawesome-free-5.12.0-web/css/all.css" rel="stylesheet">
     </head>
 
     <body>
     {% block navbar %}
-        <nav class="navbar navbar-expand-lg fixed-top ">
+        <nav class="navbar navbar-expand-lg fixed-top " id="navbar">
             <a class=" linkHome navbar-brand" href="{{ path('index') }}">Christian COLEY</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+            <div class=" collapse navbar-collapse itemNavbar" id="navbarNavDropdown" >
                 <ul class="navbar-nav mr-5">
                     <li class="nav-item active">
                         <a class="linkNav nav-link" href="#bio">Ma bio <span class="sr-only">(current)</span></a>
@@ -49,7 +51,6 @@
                                 <h2>Réseau social</h2>
                                 <a  href="https://www.linkedin.com/in/christian-coley-736b68173/"><img class="logoFooter" src="pictures/logos/linkedin.png" class="pr-5 text-white-50 facebookLogo" alt="logo et lien vers linkedin"></a>
                                 <a  href="https://www.github.com/chris091084/"><img class="logoFooter" src="pictures/logos/github.png" class="pr-5 text-white-50 facebookLogo" alt="logo et lien vers github"></a>
-                                <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i class="fa fa-linkedin-square"></i></a></p>
                             </div>
                             <div class="col-lg-3 col-xs-12 links">
                                 <h4 class="mt-lg-0 mt-sm-3">Liens</h4>
@@ -57,6 +58,7 @@
                                     <li><a href="#bio">Ma bio</a></li>
                                     <li><a href="#">Mon CV</a></li>
                                     <li><a href="#mesprojets">Mes projets</a></li>
+                                    <li><a href="{{ path('easyadmin') }}">Admin</a></li>
 
                                 </ul>
                             </div>
