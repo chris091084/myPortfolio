@@ -1,6 +1,36 @@
 easy_admin:
-  entities:
-    # change the following to the namespaces of your own entities
-    - App\Entity\Project
-    - App\Entity\Technologie
-    - App\Entity\OtherScreenshoot
+    entities:
+        Project:
+            class: App\Entity\Project
+            list:
+                fields:
+                    - 'name'
+                    - 'linkUrl'
+                    - 'comment'
+                    - { property: 'screen_shoot', type: 'image', base_path: '%app.path.project_images%' }
+            show:
+                fields:
+                    - 'name'
+                    - 'linkUrl'
+                    - 'comment'
+                    - { property: 'screen_shoot', type: 'image', base_path: '%app.path.project_images%' }
+            form:
+                fields:
+                    - 'name'
+                    - 'linkUrl'
+                    - 'comment'
+                    - 'technologies'
+                    - 'otherScreenshoots'
+                    - { property: 'screenShootFile', type: 'vich_image' }                  
+                   
+
+                
+          
+
+         
+                  
+
+   # change the following to the namespaces of your own entities
+    #- App\Entity\Project
+    #- App\Entity\Technologie
+    #- App\Entity\OtherScreenshoot
