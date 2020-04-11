@@ -5,9 +5,12 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProjectRepository")
+ * @Vich\Uploadable
  */
 class Project
 {
@@ -27,6 +30,13 @@ class Project
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $screenShoot;
+
+    /**
+     * @Vich\UploadableField(mapping="product_images", fileNameProperty="screen_shoot")
+     * @var File
+     */
+    private $screenShootFile;
+
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -86,6 +96,18 @@ class Project
 
         return $this;
     }
+
+    public function setScreenShootFile(File $image = null) : void
+    {
+        $this->screenShootFile = $image;
+
+    }
+
+    public function getScreenShootFile()
+    {
+        return $this->screenShootFile;
+    }
+
 
     public function getLinkUrl(): ?string
     {

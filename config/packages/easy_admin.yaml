@@ -1,6 +1,24 @@
 easy_admin:
-  entities:
-    # change the following to the namespaces of your own entities
-    - App\Entity\Project
-    - App\Entity\Technologie
-    - App\Entity\OtherScreenshoot
+    entities:
+        Project:
+            class: App\Entity\Project
+            list:
+                fields:
+                   - 'id'
+                   - 'name'
+                   - { property: 'screen_shoot', type: 'image', base_path: '%app.path.product_images%' }
+            show:
+                fields:
+                    - { property: 'screen_shoot', type: 'image', base_path: '%app.path.product_images%' }
+                   
+
+                
+          
+
+         
+                  
+
+   # change the following to the namespaces of your own entities
+    #- App\Entity\Project
+    #- App\Entity\Technologie
+    #- App\Entity\OtherScreenshoot

@@ -29,7 +29,7 @@ class AppFixtures extends Fixture
             $detail = new DetailFormation();
             $detail->setDescription($faker->sentence($nbWords = 6, $variableNbWords = true));
 
-            $detail->addFormation($this->getReference('formation_'.$i));
+            //$detail->addFormation($this->getReference('formation_'.$i));
             $manager->persist($formation);
 
         }
