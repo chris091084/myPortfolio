@@ -6,10 +6,20 @@ easy_admin:
                 fields:
                    - 'id'
                    - 'name'
-                   - { property: 'screen_shoot', type: 'image', base_path: '%app.path.product_images%' }
+                   - { property: 'screen_shoot', type: 'image', base_path: '%app.path.project_images%' }
             show:
                 fields:
-                    - { property: 'screen_shoot', type: 'image', base_path: '%app.path.product_images%' }
+                    - 'id'
+                    - 'name'
+                    - { property: 'screen_shoot', type: 'image', base_path: '%app.path.project_images%' }
+            form:
+                fields:
+                    - 'name'
+                    - 'linkUrl'
+                    - 'comment'
+                    - 'technologies'
+                    - 'otherScreenshoots'
+                    - { property: 'screenShootFile', type: 'vich_image' }                  
                    
 
                 

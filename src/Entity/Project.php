@@ -32,10 +32,16 @@ class Project
     private $screenShoot;
 
     /**
-     * @Vich\UploadableField(mapping="product_images", fileNameProperty="screen_shoot")
+     * @Vich\UploadableField(mapping="project_images", fileNameProperty="screen_shoot")
      * @var File
      */
     private $screenShootFile;
+
+     /**
+     * @ORM\Column(type="datetime")
+     * @var \DateTime
+     */
+    private $updatedAt;
 
 
     /**
@@ -66,6 +72,7 @@ class Project
     {
         $this->technologies = new ArrayCollection();
         $this->otherScreenshoots = new ArrayCollection();
+        $this->updatedAt = new \DateTime();
     }
 
     public function getId(): ?int
@@ -97,15 +104,34 @@ class Project
         return $this;
     }
 
-    public function setScreenShootFile(File $image = null) : void
+    public function setScreenShootFile(File $screenShoot = null) : void
     {
-        $this->screenShootFile = $image;
-
+        $this->screenShootFile = $screenShoot;
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($screenShoot) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
     }
+
 
     public function getScreenShootFile()
     {
         return $this->screenShootFile;
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?string $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
     }
 
 
