@@ -4,13 +4,15 @@ easy_admin:
             class: App\Entity\Project
             list:
                 fields:
-                   - 'id'
-                   - 'name'
-                   - { property: 'screen_shoot', type: 'image', base_path: '%app.path.project_images%' }
+                    - 'name'
+                    - 'linkUrl'
+                    - 'comment'
+                    - { property: 'screen_shoot', type: 'image', base_path: '%app.path.project_images%' }
             show:
                 fields:
-                    - 'id'
                     - 'name'
+                    - 'linkUrl'
+                    - 'comment'
                     - { property: 'screen_shoot', type: 'image', base_path: '%app.path.project_images%' }
             form:
                 fields:
