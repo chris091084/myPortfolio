@@ -4,7 +4,7 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    app.path.project_images: /
+    app.path.project_images: https://1drv.ms/u/s!AkIzTpJ8NYgvjOFHzWNTDDGkc6Oiog?e=I16pL5
 
 services:
     # default configuration for services in *this* file
